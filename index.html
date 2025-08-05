@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Tech-shop/style.css">
+  <title>Tech shop </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-dark text-white">
+  <!--Nav bar-->
+  <nav class="navbar px-3 fixed-top" style="background:#18191a; min-height:54px">
+    <a class="navbar-brand" href="./index.html">Tech-Shop</a>
+    <div class="ms-auto d-flex align-items-center">
+      <button class="icon-btn" title="Search" onclick="alert('Search')"><i class="bi bi-search"></i></button>
+      <a class="icon-btn" title="My Cart" href="./cart.html"><i class="bi bi-cart"></i><span
+          class="badge-custom"></span></a>
+      <button class="icon-btn" title="Account" data-bs-toggle="modal" data-bs-target="#accountPrompt"><i
+          class="bi bi-person"></i></button>
+    </div>
+  </nav>
+  <!-- Account Prompt Modal (aligned right corner) -->
+  <div class="modal fade" id="accountPrompt" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-scrollable modal-right">
+      <div class="modal-content bg-dark text-light p-3">
+        <h6 class="mb-2"><strong>Hello!</strong></h6>
+        <p class="mb-2">Access account and manage orders</p>
+        <button class="btn btn-outline-light w-100 mb-2" data-bs-target="#loginModal" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Login / Signup</button>
+        <small class="text-muted">Please Login</small>
+      </div>.
+
+    </div>
+  </div>
+<br><br>
+  <!-- Login / Signup Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title required" id="formTitle">Login</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p id="switchPrompt">New to Tech-Shop? <span class="text-info cursor-pointer" data-bs-target="#signupForm"
+              data-bs-toggle="modal" data-bs-dismiss="modal">Create an account</span></p>
+          <input type="email" class="form-control mt-2" placeholder="Email">
+          <input type="password" class="form-control mt-2" placeholder="Password">
+          <button class="btn btn-danger w-100 mt-3">Login</button>
+          <p class="text-center mt-2">or login with</p>
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-primary">Facebook</button>
+            <button class="btn btn-danger">Google</button>
+            <button class="btn btn-info text-white">Twitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Signup</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Already have an account? <span class="text-info cursor-pointer" data-bs-target="#loginModal"
+              data-bs-toggle="modal" data-bs-dismiss="modal">Login</span></p>
+          <input type="text" class="form-control" placeholder="Username">
+          <input type="email" class="form-control mt-2" placeholder="Email">
+          <input type="password" class="form-control mt-2" placeholder="Password">
+          <input type="password" class="form-control mt-2" placeholder="Confirm Password">
+          <button class="btn btn-danger w-100 mt-3">Signup</button>
+          <p class="text-center mt-2">or Signup with</p>
+          <div class="d-flex justify-content-around">
+            <button class="btn btn-primary">Facebook</button>
+            <button class="btn btn-danger">Google</button>
+            <button class="btn btn-info text-white">Twitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--carousel slides-->
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-top="100" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <!--Slide 1-->
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container py-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="text-center text-md-start text-align-right">
+            <h6>Sony WH-XB910N</h6>
+            <h2>Give Your Favourite <br> Music A Boost.</h2>
+            <p><strong>₹13,489</strong> <del>₹19,990</del></p>
+            <a href="#" class="btn btn-danger">Shop Now</a>
+          </div>
+          <img src="../Tech-shop/products/sonyXb910n-1.png" alt="Sony" class="img-fluid product-img">
+        </div>
+      </div>
+      <!--Slide 2-->
+
+      <div class="carousel-item">
+        <div class="container py-2 d-flex flex-column flex-md-row align-items-center justify-content-between  ">
+          <div class="text-center text-md-start">
+            <h6>boAt Airdopes 131</h6>
+            <h2>Featherweight For<br> Comfort All-Day.</h2>
+            <p><strong>₹1,099</strong> <del>₹2,990</del></p>
+            <a href="#" class="btn btn-danger">Shop Now</a>
+          </div>
+          <img src="../Tech-shop/products/boat131-3.png" alt="boAt" class="img-fluid product-img">
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="container py-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
+          <div class="text-center text-md-start">
+            <h6>JBL Live 660NC</h6>
+            <h2>Keep The Noise Out,<br> Or In. You Choose.</h2>
+            <p><strong>₹9,999</strong> <del>₹14,999</del></p>
+            <button a href="./products1.html" class="btn btn-danger">Shop Now</a></button>
+          </div>
+          <img src="../Tech-shop/products/jbl660nc-1.png" alt="JBL" class="img-fluid product-img">
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!--Alternative Carousel-->
+
+
+  <div class="Featured-products">
+    <h1>Featured Products</h1>
+  </div>
+  <!--Carousel for featured products-->
+  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row justify-content-center text-white text-center">
+            <div class="col-md-2 product-card1 ">
+              <div>boAt Rockerz 255</div><br>
+              <img src="../Tech-shop/products/boat255r-1.png" class="img-fluid product-img1"
+                alt="boAt Rockerz 255" /><br><br>
+
+              <div class="price">₹899 <span class="old-price"><del>₹2,990</del></span></div>
+            </div>
+
+            <div class="col-md-2 product-card1">
+              <div>JBL Endurance Run</div><br>
+              <img src=" ../Tech-shop/products/jbl-endu-1.png" class="img-fluid product-img1"
+                alt="JBL Endurance Run" /><br><br>
+
+              <div class="price">₹999 <span class="old-price"><del>₹1,599</del></span></div>
+            </div>
+
+            <div class="col-md-2 product-card1">
+              <div>boAt Airdopes 203</div><br>
+              <img src="../Tech-shop/products/boat203-1.png" class="img-fluid product-img1"
+                alt="boAt Airdopes 203" /><br><br>
+
+              <div class="price">₹1,074 <span class="old-price"><del>₹3,999</del></span></div>
+            </div>
+
+            <div class="col-md-2 product-card1">
+              <div>boAt Rockerz 518</div><br>
+              <img src="../Tech-shop/products/boat518-1.png" class="img-fluid product-img1"
+                alt="boAt Rockerz 518" /><br><br>
+
+              <div class="price">₹1,299 <span class="old-price"><del>₹3,990</del></span></div>
+            </div>
+
+            <div class="col-md-2 product-card1">
+              <div>JBL Tune 760NC</div><br>
+              <img src="../Tech-shop/products/jbl760nc-1.png" class="img-fluid product-img1"
+                alt="JBL Tune 760NC" /><br><br>
+              <div class="price">₹5,999 <span class="old-price"><del>₹7,999</del></span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- More carousel-item divs can be added here for additional slides -->
+
+    </div>
+
+    <!-- Carousel indicators (dots) -->
+    <div class="d-flex justify-content-center mt-3">
+      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0"
+        class="active btn btn-sm btn-light rounded-circle mx-1" aria-current="true"></button>
+      <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"
+        class="btn btn-sm btn-light rounded-circle mx-1"></button>
+    </div>
+  </div>
+
+  <!--Top Products-->
+  <div class="Top-products">
+    <h1>Top Products</h1>
+  </div>
+  <!--nav top products-->
+  <nav class="navbar navbar-expand-lg bg-body-black">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav justify-content-between">
+          <div class="Down-menu">
+            <a class="nav-link active text-white" aria-current="page" href="./index.html">All</a>
+            <a class="nav-link text-white" href="#">Headphones</a>
+            <a class="nav-link text-white" href="#">Earbuds</a>
+            <a class="nav-link text-white" href="#">Earphones</a>
+            <a class="nav-link text-white" href="#">Neckbands</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--Display cars for products-->
+  <div class="container my-4 ">
+    <div class="row ">
+
+      <!-- Card 1 -->
+      <div class="col-md-3 mb-3 text-white ">
+        <div class="card bg-black p-4 border ">
+          <img src="../Tech-shop/products/jbl660nc-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5 > JBL LIVE 660NC</h5>
+              <h5>Wireless over-Ear Nc <span>Headphones</span></h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="./products1.html" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/boat518-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title ">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5> boAt Airdopes 518</h5>
+              <h5>On-Ear Wireless Headphones</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="./products2.html" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/boat131-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5> boAt Airdopes 131</h5>
+              <h5>Wireless in-Ear Earbuds</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/boat110-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5> boAt BassHeads 110</h5>
+              <h5>in-Ear Wired Earphones</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/boat410-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5> boAt Rockerz 410</h5>
+              <h5>Bluthooth & Wired On-Ear Headphones</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/jbl200bt-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!--<span class="star">&#9733;</span>-->
+              </div>
+              <h5> JBL Live 200Bt </h5>
+              <h5>In-Ear Wiredless Neckbands</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="col-md-3 mb-3">
+        <div class="card-1 bg-black p-4  border">
+          <img src="../Tech-shop/products/sonyXb910n-4.png" class="card-img-top " alt="boAt Airdopes 441"
+            style="height: auto;  width: 100%;">
+          <div class="card-body text-white">
+            <div class="star-rating">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <!--<span class="star">&#9733;</span>-->
+
+              <h5>Sony WH-XB910N</h5>
+              <h5>Wireless over-Ear headphones</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/jbl760nc-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!--<span class="star">&#9733;</span>-->
+              </div>
+              <h5> JBL Tune 760NC</h5>
+              <h5>Wireless Over-Ear Nc Headphones</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!--card 9-->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <img src="../Tech-shop/products/boat255r-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <h5> boAt Rockerz 255</h5>
+              <h5>In-Ear Wireless Neckbands</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-10 border">
+
+          <img src="../Tech-shop/products/jbl100-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title text-white">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!--<span class="star">&#9733;</span>-->
+              </div>
+              <h5> JBL Wave 100</h5>
+              <h5>In-Ear Wiredless Earbuds</h5>
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+
+              <a href="#" class="btn btn-primary btn-danger">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 11 -->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-10 border">
+          <img src="../Tech-shop/products/sony1000xm4-1.png" class="card-img-top" alt="boAt Airdopes 441">
+          <div class="card-body text-white">
+            <h5 class="card-title">
+              <div class="star-rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <!--<span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>-->
+              </div>
+              <h5> Sony WF-1000XM4</h5>
+              <h5>Wireless in-Ear Nc Headphones</h5>
+              <hr style="border: 2px solid rgb(241, 235, 235); width: 100%;">
+              <p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+              <a href="#" class="btn btn-danger width-auto !important ">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <!--card 12-->
+      <div class="col-md-3 mb-3">
+        <div class="card bg-black p-4 border">
+          <!--<img src="../Tech-shop/products/boat-audio-1.png" class="card-img-top" alt="boAt Airdopes 441">-->
+          <div class="card-body text-white ">
+            <h5 class="card-title">
+              <h5> Brouse all <span>Products <span>&rarr;</span></span></h5>
+
+              <!--<p class="card-text">₹2,499 <span class="old-price"><del>₹5,990</del></span></p>
+            <a href="#" class="btn btn-primary">Buy Now</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Our Advantages-->
+    <h2 class="text-center align-items-center justify-content-between m-5">Our Advantages</h2>
+    <div class="d-flex justify-content-between flex-wrap gap-0 mt-5 py-3 ms-4 me-4">
+      <div class="d-flex flex-wrap justify-content-center align-items-start gap-3">
+        <i class="bi bi-truck text-danger fs-3"></i>
+        <div>
+          <p>Express Delivery <br> Ship in 24 Hours</p>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center align-items-start gap-3">
+        <i class="bi bi-shield-check text-danger fs-3"></i>
+        <p>Brand Warranty<br> 100% Original products</p>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center align-items-start gap-3">
+        <i class="bi bi-tags text-danger fs-3 "></i>
+        <p>Exciting Deals<br> On All prepaid Orders</p>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center align-items-start gap-3">
+        <i class="bi bi-credit-card text-danger fs-3 "></i>
+        <p>Secure Payments <br> SSL / Secure Payments</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer bg-black py-5 justify-content-center">
+    <div class="container ">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <h5>Tech shop</h5>
+          <p class=" text-white text-opacity-75">Subscribe to our email alert to recive early discount offers,<br>and
+            product info</p>
+          <nav class="">
+            <input type="email Address" name="email" placeholder="email Address*"
+              style="color: white; background-color: black;"><br>
+            <button class="btn btn-subscribe bg-danger text-white">Subscribe</button>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5>Help</h5>
+          <ul class="list-unstyled text-white text-opacity-75">
+            <li>FAQs</li>
+            <li>Track Order</li>
+            <li>Cancel Order</li>
+            <li>Return Order</li>
+            <li>Warranty Info</li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5>Policies</h5>
+          <ul class="list-unstyled text-white text-opacity-75">
+            <li>Return Policy</li>
+            <li>Security</li>
+            <li>Sitemap</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5>Company</h5>
+          <ul class="list-unstyled text-white text-opacity-75">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Service center</li>
+            <li>Careers</li>
+            <li>Affiliates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="bg-black border-top border-1"><br>
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <!-- Left side -->
+        <div class="col-md-6 text-start text-white text-opacity-75">
+          <p class="mb-0">2025 | All Rights Reserved © Dinesh kumar Nellore</p>
+        </div>
+
+        <!-- Right side -->
+        <div class="col-md-6 text-end">
+          <div class="d-inline-flex align-items-center gap-3">
+            <i class="bi bi-facebook text-white"></i>
+            <i class="bi bi-instagram text-white"></i>
+            <i class="bi bi-twitter text-white"></i>
+            <i class="bi bi-linkedin text-white"></i>
+            <a href="#top">
+              <button class="btn btn-danger btn-sm"><i class="bi bi-chevron-up"></i></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
