@@ -17,7 +17,7 @@ Tech Shop is a modern eCommerce platform built to provide users with a seamless 
 💻 Tech Stack:
 Frontend: HTML5, CSS3, Bootstrap 5,
 
-Version Control: Git & GitHub
+Version Control: Git & GitHub.
 
 📈 Why Tech Shop?
 Tech Shop makes online tech shopping easier and smarter. With a focus on usability, speed, and security, it’s ideal for customers who want a smooth buying experience and for developers aiming to learn full-stack eCommerce development..
