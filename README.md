@@ -12,7 +12,7 @@ Tech Shop is a modern eCommerce platform built to provide users with a seamless 
 
 📦 Cart & Wishlist – Add to cart, wishlist, and track orders easily
 
-🛠️ Admin Dashboard – Manage inventory, orders, users, and site settings
+🛠️ Admin Dashboard – Manage inventory, orders, users, and site settings.
 
 💻 Tech Stack:
 Frontend: HTML5, CSS3, Bootstrap 5,
