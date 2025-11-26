@@ -10,7 +10,7 @@ Tech Shop is a modern eCommerce platform built to provide users with a seamless 
 
 🔐 User Authentication – Login, registration, and password protection for customer accounts
 
-📦 Cart & Wishlist – Add to cart, wishlist, and track orders easily
+📦 Cart & Wishlist – Add to cart, wishlist, and track orders easily.
 
 🛠️ Admin Dashboard – Manage inventory, orders, users, and site settings.
 
