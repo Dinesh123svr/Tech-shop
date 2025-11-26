@@ -4,7 +4,7 @@ Tech Shop is a modern eCommerce platform built to provide users with a seamless 
 🔧 Key Features:
 ✅ User-friendly Interface – Clean, responsive design for easy browsing on any device
 
-🛍️ Product Catalog – Categorized listings with filters for price, brand, and specifications
+🛍️ Product Catalog – Categorized listings with filters for price, brand, and specifications.
 
 
 
