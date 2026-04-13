@@ -22,7 +22,7 @@ pipeline {
             steps {
                 
                 git branch: "${params.Choice_ENV}",
-                url: 'https://github.com/tawsdevops-oss/git-code.git'
+                url: 'https://github.com/Dinesh123svr/Tech-shop.git'
             }
         }
 
