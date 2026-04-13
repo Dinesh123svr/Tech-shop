@@ -1,0 +1,38 @@
+
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'Choice_ENV',
+            choices: ['development','main','stage'],
+            description: 'Deployment Environment Branches'
+        )
+    }
+
+    stages {
+
+        stage('CleanUP') {
+            steps {
+                cleanWs()
+            }
+        }
+		
+        stage('Git Clone with variables') {
+            steps {
+                
+                git branch: "${params.Choice_ENV}",
+                url: 'https://github.com/tawsdevops-oss/git-code.git'
+            }
+        }
+
+        stage('Build job') {
+            steps {
+
+                bat """ npm install """
+            }
+        }
+
+
+    }
+}
